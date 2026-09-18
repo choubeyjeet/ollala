@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cat & Mouse - Catch Me!</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="game-wrapper">
+      <!-- =========================================
+         TITLE
+    ========================================== -->
+
+      <div class="game-title">
+        <div class="cat-title">🐱 CAT</div>
+
+        <div class="mouse-title">&amp; MOUSE 🐭</div>
+      </div>
+
+      <!-- =========================================
+         SCORE
+    ========================================== -->
+
+      <div class="score-panel">
+        <div class="score-label">CATCHES</div>
+
+        <div class="score-value" id="scoreDisplay">0 🏆</div>
+      </div>
+
+      <!-- =========================================
+         STATUS
+    ========================================== -->
+
+      <div class="status-panel" id="statusPanel">Find the mouse! 🐭</div>
+
+      <!-- =========================================
+         GAME
+    ========================================== -->
+
+      <div id="game-container"></div>
+
+      <!-- =========================================
+         INSTRUCTIONS
+    ========================================== -->
+
+      <div class="instruction-card">
+        <div class="instruction-title">🐱 CATCH THE MOUSE</div>
+
+        <div class="instruction-text">
+          Move your cursor toward the mouse. When you get close...
+          <strong>IT RUNS! 🐭💨</strong>
+        </div>
+      </div>
+
+      <!-- =========================================
+         RESET
+    ========================================== -->
+
+      <button type="button" class="reset-button" id="resetBtn">🔄 RESET</button>
+
+      <!-- =========================================
+         BOTTOM
+    ========================================== -->
+
+      <div class="bottom-banner">
+        Don't let the mouse escape!
+
+        <span> Catch Me If You Can! 😜 </span>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
