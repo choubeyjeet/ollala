@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Punch Kick & More!</title>
+
+    <!-- Phaser -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
+
+    <!-- Game CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="game-wrapper">
+      <!-- =========================================
+         GAME TITLE
+    ========================================== -->
+
+      <div class="game-title">
+        <div class="title-punch">PUNCH</div>
+        <div class="title-kick">KICK</div>
+        <div class="title-more">&amp; MORE!</div>
+      </div>
+
+      <!-- =========================================
+         TOP HUD
+    ========================================== -->
+
+      <div class="hud">
+        <!-- SCORE -->
+
+        <div class="hud-card score-card">
+          <div class="hud-label">SCORE</div>
+
+          <div class="hud-value" id="scoreDisplay">0 🏆</div>
+        </div>
+
+        <!-- HEALTH -->
+
+        <div class="hud-card health-card">
+          <div class="hud-label">TARGET HEALTH</div>
+
+          <div class="health-wrapper">
+            <div class="health-background">
+              <div class="health-bar" id="healthBar"></div>
+            </div>
+
+            <div class="health-percent" id="healthDisplay">100%</div>
+          </div>
+        </div>
+
+        <!-- COMBO -->
+
+        <div class="hud-card combo-card">
+          <div class="hud-label">COMBO</div>
+
+          <div class="hud-value combo-value" id="comboDisplay">x0 🔥</div>
+        </div>
+      </div>
+
+      <!-- =========================================
+         UPLOAD PANEL
+    ========================================== -->
+
+      <div class="upload-panel">
+        <div class="panel-title">📸 YOUR TARGET</div>
+
+        <div class="image-preview">
+          <span id="previewPlaceholder" class="preview-placeholder"> 👤 </span>
+
+          <img id="previewImage" alt="Target preview" />
+        </div>
+
+        <label class="upload-button">
+          📷 Upload Image
+
+          <input
+            type="file"
+            id="imageUpload"
+            accept="image/png,image/jpeg,image/webp"
+          />
+        </label>
+
+        <div class="upload-help">
+          Upload JPG, PNG or WebP and start hitting!
+        </div>
+      </div>
+
+      <!-- =========================================
+         PHASER GAME
+    ========================================== -->
+
+      <div id="game-container"></div>
+
+      <!-- =========================================
+         ACTION PANEL
+    ========================================== -->
+
+      <div class="actions-panel">
+        <div class="actions-title">ACTIONS</div>
+
+        <button class="action-button punch-button" id="punchBtn">
+          <span>👊</span>
+          PUNCH
+        </button>
+
+        <button class="action-button kick-button" id="kickBtn">
+          <span>🦵</span>
+          KICK
+        </button>
+
+        <button class="action-button shoes-button" id="shoesBtn">
+          <span>👟</span>
+          SHOES
+        </button>
+
+        <button class="action-button ball-button" id="ballBtn">
+          <span>🏀</span>
+          BASKETBALL
+        </button>
+
+        <button class="action-button stick-button" id="stickBtn">
+          <span>🪵</span>
+          STICK
+        </button>
+
+        <button class="action-button reset-button" id="resetBtn">
+          <span>🔄</span>
+          RESET
+        </button>
+      </div>
+
+      <!-- =========================================
+         BOTTOM BANNER
+    ========================================== -->
+
+      <div class="bottom-banner">
+        Different Actions. Same Result.
+        <span>OLLALA! 😜</span>
+      </div>
+    </div>
+
+    <!-- Game JS -->
+    <script src="./assets/js/game.js"></script>
+  </body>
+</html>
